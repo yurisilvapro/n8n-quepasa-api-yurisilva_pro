@@ -54,7 +54,7 @@ Se der certo, você verá:
 
 ```
 npm notice Publishing to https://registry.npmjs.org/ with tag latest
-+ @yurisilva_pro/n8n-nodes-quepasa@2.0.1
++ n8n-nodes-quepasa-api-yurisilva_pro@2.0.1
 ```
 
 E pronto! 🎉
@@ -66,11 +66,11 @@ E pronto! 🎉
 Após publicar, acesse:
 
 **npm Registry:**  
-https://www.npmjs.com/package/@yurisilva_pro/n8n-nodes-quepasa
+https://www.npmjs.com/package/n8n-nodes-quepasa-api-yurisilva_pro
 
 **Testar instalação:**
 ```bash
-npm view @yurisilva_pro/n8n-nodes-quepasa
+npm view n8n-nodes-quepasa-api-yurisilva_pro
 ```
 
 ---
@@ -104,8 +104,8 @@ npm error 403 Forbidden
 ```
 
 **Solução:** 
-- Verifique se o pacote já existe: https://www.npmjs.com/package/@yurisilva_pro/n8n-nodes-quepasa
-- Use um scoped package com seu username: `@yurisilva_pro/nome-do-pacote`
+- Verifique se o pacote já existe: https://www.npmjs.com/package/n8n-nodes-quepasa-api-yurisilva_pro
+- Use um nome único adicionando seu username ao final
 
 ---
 
@@ -113,7 +113,7 @@ npm error 403 Forbidden
 
 ```json
 {
-  "name": "@yurisilva_pro/n8n-nodes-quepasa",
+  "name": "n8n-nodes-quepasa-api-yurisilva_pro",
   "version": "2.0.1",
   "author": "Yuri Silva",
   "license": "MIT"
@@ -130,7 +130,7 @@ npm error 403 Forbidden
 
 ### 1. Verifique no npm:
 ```bash
-npm view @yurisilva_pro/n8n-nodes-quepasa
+npm view n8n-nodes-quepasa-api-yurisilva_pro
 ```
 
 ### 2. Teste a instalação:
@@ -138,13 +138,13 @@ npm view @yurisilva_pro/n8n-nodes-quepasa
 mkdir test-install
 cd test-install
 npm init -y
-npm install @yurisilva_pro/n8n-nodes-quepasa
+npm install n8n-nodes-quepasa-api-yurisilva_pro
 ```
 
 ### 3. Use no n8n:
 - Abra n8n
 - Settings → Community Nodes
-- Instale: `@yurisilva_pro/n8n-nodes-quepasa`
+- Instale: `n8n-nodes-quepasa-api-yurisilva_pro`
 - Restart n8n
 - Procure por "QuePasa" nos nodes!
 
