@@ -9,7 +9,7 @@ export class QuePasaApi implements ICredentialType {
   name = 'quePasaApi';
   displayName = 'QuePasa API';
   documentationUrl = 'https://github.com/nocodeleaks/quepasa';
-  icon = 'file:quepasa.svg' as any;
+  icon = 'file:quepasa.png' as any;
   properties: INodeProperties[] = [
     {
       displayName: 'Base URL',

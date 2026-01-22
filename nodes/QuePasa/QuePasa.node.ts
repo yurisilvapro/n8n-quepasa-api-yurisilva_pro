@@ -21,7 +21,7 @@ export class QuePasa implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'QuePasa API (WhatsApp)',
     name: 'quePasa',
-    icon: 'file:quepasa.svg',
+    icon: 'file:quepasa.png',
     group: ['transform'],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
