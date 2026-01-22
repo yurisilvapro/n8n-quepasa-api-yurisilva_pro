@@ -1,0 +1,49 @@
+# Source files (só publicamos dist/)
+nodes/
+credentials/
+utils/
+tests/
+
+# Config files
+.eslintrc.js
+.prettierrc
+jest.config.js
+tsconfig.json
+
+# Documentation (opcional - pode incluir se quiser)
+docs/
+ANALISE_*.md
+CHECKLIST_*.md
+COMO_TESTAR_*.md
+DOCUMENTACAO_*.md
+ENDPOINTS_*.md
+FASE2_*.md
+IMPLEMENTACAO_*.md
+PUBLICACAO_*.md
+PUBLICADO.md
+QUICK_START.md
+RESUMO_*.md
+STATUS_*.md
+
+# Development
+.vscode/
+.idea/
+*.log
+*.tmp
+.cache/
+coverage/
+node_modules/
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keep only
+!dist/
+!README.md
+!LICENSE
+!package.json
