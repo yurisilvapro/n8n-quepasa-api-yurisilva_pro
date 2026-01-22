@@ -26,7 +26,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc && npm run copy:assets",
-    "copy:assets": "copyfiles -u 1 \"nodes/**/*.{png,svg,json}\" dist/ && cp credentials/*.svg dist/credentials/ 2>/dev/null || true",
+    "copy:assets": "copyfiles -u 1 \"nodes/**/*.{png,svg,json}\" dist/ && copyfiles -u 1 \"credentials/*.svg\" dist/credentials/ && node -e \"const fs=require('fs');const path=require('path');if(fs.existsSync('dist/QuePasa/quepasa.svg')){fs.mkdirSync('dist/nodes/QuePasa',{recursive:true});fs.copyFileSync('dist/QuePasa/quepasa.svg','dist/nodes/QuePasa/quepasa.svg');}\"",
     "dev": "tsc --watch",
     "format": "prettier --write \"**/*.{ts,json,md}\"",
     "lint": "eslint . --ext .ts",
