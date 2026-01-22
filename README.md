@@ -4,9 +4,12 @@
 
 **Implementação completa da API QuePasa WhatsApp para n8n com suporte multi-conta**
 
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![npm version](https://badge.fury.io/js/n8n-nodes-quepasa.svg)](https://www.npmjs.com/package/n8n-nodes-quepasa)
+[![npm downloads](https://img.shields.io/npm/dm/n8n-nodes-quepasa.svg)](https://www.npmjs.com/package/n8n-nodes-quepasa)
+[![TypeScript](https://img.shields.io/badge/TypeScript-100%25-blue?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![n8n](https://img.shields.io/badge/n8n-Ready-EA4B71?style=flat)](https://n8n.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub](https://img.shields.io/github/stars/yurisilvapro/n8n-quepasa-api-yurisilva_pro?style=social)](https://github.com/yurisilvapro/n8n-quepasa-api-yurisilva_pro)
 
 ---
 
@@ -49,7 +52,7 @@ QuePasa é uma micro web-aplicação em Go que fornece uma API RESTful HTTP para
 
 ## 📊 Status
 
-**Versão:** 2.0.0  
+**Versão:** 2.0.1  
 **Status:** ✅ **100% COMPLETO - PRODUÇÃO READY**  
 **Última Atualização:** 22 de Janeiro de 2026
 
@@ -548,9 +551,25 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 📞 Suporte
 
-- **Issues:** [GitHub Issues](https://github.com/yurisilva_pro/n8n-quepasa-nodes/issues)
+- **Issues:** [GitHub Issues](https://github.com/yurisilvapro/n8n-quepasa-api-yurisilva_pro/issues)
 - **Documentação:** [docs/README.md](./docs/README.md)
-- **Email:** yurisilva@pro.com
+
+---
+
+## 👨‍💻 Autor
+
+### **Yuri Silva**
+*Desenvolvedor & CEO do Fale Já*  
+Empresário | Tecnologia na Saúde | Segurança da Informação | Inteligência Artificial
+
+#### 📬 Contato
+
+- 🌐 **Website:** [taggo.one/yurisistemas](https://taggo.one/yurisistemas)
+- 📧 **Email:** yurisilvanegocios.me@gmail.com
+- 💬 **WhatsApp:** [+55 21 97208-9450](https://wa.me/5521972089450)
+- 📸 **Instagram:** [@yuri.sistemas](https://instagram.com/yuri.sistemas)
+- 💼 **GitHub:** [@yurisilvapro](https://github.com/yurisilvapro)
+- 🚀 **Fale Já:** [faleja.com.br](https://faleja.com.br)
 
 ---
 
@@ -575,6 +594,6 @@ Documentação:         15 arquivos
 
 ---
 
-**Feito com ❤️ por [Yuri Silva](https://github.com/yurisilva_pro)**
+**Feito com ❤️ para a comunidade n8n**
 
 **Última atualização:** 22 de Janeiro de 2026
