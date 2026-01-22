@@ -14,14 +14,14 @@
     "multi-account"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/yurisilvapro/n8n-quepasa-api-yurisilva_pro",
+  "homepage": "https://github.com/yurisilvapro/n8n-nodes-quepasa-api-yurisilva_pro",
   "author": {
     "name": "Yuri Silva",
     "email": "yuri@yurisilva.pro"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yurisilvapro/n8n-quepasa-api-yurisilva_pro.git"
+    "url": "git+https://github.com/yurisilvapro/n8n-nodes-quepasa-api-yurisilva_pro.git"
   },
   "main": "index.js",
   "scripts": {

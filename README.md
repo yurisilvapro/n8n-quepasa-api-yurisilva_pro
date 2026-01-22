@@ -9,7 +9,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-100%25-blue?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![n8n](https://img.shields.io/badge/n8n-Ready-EA4B71?style=flat)](https://n8n.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub](https://img.shields.io/github/stars/yurisilvapro/n8n-quepasa-api-yurisilva_pro?style=social)](https://github.com/yurisilvapro/n8n-quepasa-api-yurisilva_pro)
+[![GitHub](https://img.shields.io/github/stars/yurisilvapro/n8n-nodes-quepasa-api-yurisilva_pro?style=social)](https://github.com/yurisilvapro/n8n-nodes-quepasa-api-yurisilva_pro)
 
 ---
 
@@ -551,7 +551,7 @@ Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICE
 
 ## 📞 Suporte
 
-- **Issues:** [GitHub Issues](https://github.com/yurisilvapro/n8n-quepasa-api-yurisilva_pro/issues)
+- **Issues:** [GitHub Issues](https://github.com/yurisilvapro/n8n-nodes-quepasa-api-yurisilva_pro/issues)
 - **Documentação:** [docs/README.md](./docs/README.md)
 
 ---
