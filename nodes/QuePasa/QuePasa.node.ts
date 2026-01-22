@@ -19,7 +19,7 @@ import { quePasaApiRequest, formatPhoneNumber } from '../../utils/GenericFunctio
 
 export class QuePasa implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'QuePasa',
+    displayName: 'QuePasa API (WhatsApp)',
     name: 'quePasa',
     icon: 'file:quepasa.svg',
     group: ['transform'],
@@ -27,7 +27,7 @@ export class QuePasa implements INodeType {
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description: 'Interact with QuePasa WhatsApp API',
     defaults: {
-      name: 'QuePasa',
+      name: 'QuePasa API (WhatsApp)',
     },
     inputs: ['main'],
     outputs: ['main'],
