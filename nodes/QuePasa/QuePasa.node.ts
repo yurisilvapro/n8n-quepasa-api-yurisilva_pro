@@ -183,7 +183,7 @@ export class QuePasa implements INodeType {
               body.trackId = additionalOptions.trackId;
             }
 
-            responseData = await quePasaApiRequest.call(this, 'POST', '/v4/messages/send', body);
+            responseData = await quePasaApiRequest.call(this, 'POST', '/send', body);
           } else if (operation === 'sendMedia') {
             const chatId = this.getNodeParameter('chatId', i) as string;
             const mediaType = this.getNodeParameter('mediaType', i) as string;
@@ -203,7 +203,7 @@ export class QuePasa implements INodeType {
               body.caption = caption;
             }
 
-            responseData = await quePasaApiRequest.call(this, 'POST', '/v4/messages/send', body);
+            responseData = await quePasaApiRequest.call(this, 'POST', '/send', body);
           } else if (operation === 'sendFromUrl') {
             const chatId = this.getNodeParameter('chatId', i) as string;
             const url = this.getNodeParameter('url', i) as string;
@@ -222,10 +222,10 @@ export class QuePasa implements INodeType {
               body.filename = filename;
             }
 
-            responseData = await quePasaApiRequest.call(this, 'POST', '/v4/messages/send', body);
+            responseData = await quePasaApiRequest.call(this, 'POST', '/send', body);
           } else if (operation === 'revokeMessage') {
             const messageId = this.getNodeParameter('messageId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'DELETE', `/v4/messages/${messageId}`);
+            responseData = await quePasaApiRequest.call(this, 'DELETE', `/messages/${messageId}`);
           } else if (operation === 'reactToMessage') {
             const messageId = this.getNodeParameter('messageId', i) as string;
             const emoji = this.getNodeParameter('emoji', i) as string;
@@ -234,7 +234,7 @@ export class QuePasa implements INodeType {
               emoji,
             };
 
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/messages/${messageId}/react`, body);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/messages/${messageId}/react`, body);
           } else if (operation === 'forwardMessage') {
             const messageId = this.getNodeParameter('messageId', i) as string;
             const toChatId = this.getNodeParameter('toChatId', i) as string;
@@ -243,7 +243,7 @@ export class QuePasa implements INodeType {
               to: formatPhoneNumber(toChatId),
             };
 
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/messages/${messageId}/forward`, body);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/messages/${messageId}/forward`, body);
           } else if (operation === 'getHistory') {
             const chatId = this.getNodeParameter('chatId', i) as string;
             const limit = this.getNodeParameter('limit', i, 50) as number;
@@ -251,7 +251,7 @@ export class QuePasa implements INodeType {
             responseData = await quePasaApiRequest.call(
               this,
               'GET',
-              `/v4/chats/${formatPhoneNumber(chatId)}/messages`,
+              `/chats/${formatPhoneNumber(chatId)}/messages`,
               {},
               { limit: Math.min(limit, 100) }
             );
@@ -374,7 +374,7 @@ export class QuePasa implements INodeType {
               .map(p => p.trim().replace(/\D/g, ''))
               .filter(p => p);
 
-            responseData = await quePasaApiRequest.call(this, 'POST', '/v4/contacts/check', { phones });
+            responseData = await quePasaApiRequest.call(this, 'POST', '/contacts/check', { phones });
           } else if (operation === 'getPicture') {
             const contactId = this.getNodeParameter('contactId', i) as string;
             const binaryPropertyName = this.getNodeParameter('binaryPropertyName', i, 'data') as string;
@@ -382,7 +382,7 @@ export class QuePasa implements INodeType {
             const response = await quePasaApiRequest.call(
               this,
               'GET',
-              `/v4/contacts/${contactId}/picture`,
+              `/contacts/${contactId}/picture`,
               {},
               {},
               { returnFullResponse: true, encoding: null }
@@ -403,10 +403,10 @@ export class QuePasa implements INodeType {
             continue;
           } else if (operation === 'blockContact') {
             const contactId = this.getNodeParameter('contactId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/contacts/${contactId}/block`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/contacts/${contactId}/block`);
           } else if (operation === 'unblockContact') {
             const contactId = this.getNodeParameter('contactId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/contacts/${contactId}/unblock`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/contacts/${contactId}/unblock`);
           }
         }
 
@@ -421,7 +421,7 @@ export class QuePasa implements INodeType {
             const response = await quePasaApiRequest.call(
               this,
               'GET',
-              `/v4/messages/${messageId}/download`,
+              `/messages/${messageId}/download`,
               {},
               {},
               { returnFullResponse: true, encoding: null }
@@ -446,7 +446,7 @@ export class QuePasa implements INodeType {
             const response = await quePasaApiRequest.call(
               this,
               'GET',
-              `/v4/messages/${messageId}/download`,
+              `/messages/${messageId}/download`,
               {},
               {},
               { returnFullResponse: true, encoding: null }
@@ -508,19 +508,19 @@ export class QuePasa implements INodeType {
         else if (resource === 'chat') {
           if (operation === 'markAsRead') {
             const chatId = this.getNodeParameter('chatId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/markasread`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/markasread`);
           } else if (operation === 'archiveChat') {
             const chatId = this.getNodeParameter('chatId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/archive`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/archive`);
           } else if (operation === 'unarchiveChat') {
             const chatId = this.getNodeParameter('chatId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/unarchive`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/unarchive`);
           } else if (operation === 'pinChat') {
             const chatId = this.getNodeParameter('chatId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/pin`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/pin`);
           } else if (operation === 'unpinChat') {
             const chatId = this.getNodeParameter('chatId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/unpin`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/unpin`);
           } else if (operation === 'muteChat') {
             const chatId = this.getNodeParameter('chatId', i) as string;
             const duration = this.getNodeParameter('duration', i, 28800) as number;
@@ -529,10 +529,10 @@ export class QuePasa implements INodeType {
               duration,
             };
 
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/mute`, body);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/mute`, body);
           } else if (operation === 'unmuteChat') {
             const chatId = this.getNodeParameter('chatId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', `/v4/chats/${chatId}/unmute`);
+            responseData = await quePasaApiRequest.call(this, 'POST', `/chats/${chatId}/unmute`);
           }
         }
 
@@ -542,7 +542,7 @@ export class QuePasa implements INodeType {
         else if (resource === 'status') {
           if (operation === 'updatePresence') {
             const presence = this.getNodeParameter('presence', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'POST', '/v4/presence', { presence });
+            responseData = await quePasaApiRequest.call(this, 'POST', '/presence', { presence });
           } else if (operation === 'updateStatus') {
             const statusText = this.getNodeParameter('statusText', i) as string;
 
@@ -550,10 +550,10 @@ export class QuePasa implements INodeType {
               status: statusText,
             };
 
-            responseData = await quePasaApiRequest.call(this, 'POST', '/v4/status', body);
+            responseData = await quePasaApiRequest.call(this, 'POST', '/status', body);
           } else if (operation === 'getContactStatus') {
             const contactId = this.getNodeParameter('contactId', i) as string;
-            responseData = await quePasaApiRequest.call(this, 'GET', `/v4/contacts/${contactId}/status`);
+            responseData = await quePasaApiRequest.call(this, 'GET', `/contacts/${contactId}/status`);
           }
         }
 
