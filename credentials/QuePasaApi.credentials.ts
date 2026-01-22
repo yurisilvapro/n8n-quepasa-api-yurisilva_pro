@@ -47,9 +47,12 @@ export class QuePasaApi implements ICredentialType {
     request: {
       baseURL: '={{$credentials.baseUrl}}',
       url: '/info',
+      method: 'GET',
       headers: {
         'X-QUEPASA-TOKEN': '={{$credentials.token}}',
       },
+      skipSslCertificateValidation: true,
+      timeout: 10000,
     },
   };
 }
